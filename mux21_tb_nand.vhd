@@ -1,10 +1,10 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY mux21_tb IS
-END ENTITY mux21_tb;
+ENTITY mux21_tb_nand IS
+END ENTITY mux21_tb_nand;
 
-ARCHITECTURE behavior OF mux21_tb IS
+ARCHITECTURE behavior OF mux21_tb_nand IS
   COMPONENT mux21
     PORT (
       x : IN STD_LOGIC;
@@ -19,7 +19,7 @@ ARCHITECTURE behavior OF mux21_tb IS
   SIGNAL m_tb : STD_LOGIC;
 
 BEGIN
-  uut_df : mux21 PORT MAP(
+  uut_df_nand : mux21 PORT MAP(
     x => x_tb,
     y => y_tb,
     s => s_tb,

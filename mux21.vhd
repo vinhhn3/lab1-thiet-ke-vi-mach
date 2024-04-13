@@ -11,3 +11,8 @@ ARCHITECTURE df OF mux21 IS
 BEGIN -- architecture df
   m <= (y AND s) OR (x AND (NOT s));
 END ARCHITECTURE df;
+
+ARCHITECTURE df_nand OF mux21 IS
+BEGIN
+  m <= ((x NAND (s NAND s)) NAND (y NAND s));
+END ARCHITECTURE df_nand;
