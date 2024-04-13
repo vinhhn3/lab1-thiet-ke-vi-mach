@@ -34,90 +34,59 @@ BEGIN
     y_tb <= '0';
     s_tb <= '0';
     WAIT FOR 10 ns;
-    IF m_tb = '0' THEN
-      REPORT "Test Case 1 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 1 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '0') REPORT "Test Case 1 Failed" SEVERITY ERROR;
 
     -- Test case 2
     x_tb <= '1';
     y_tb <= '0';
     s_tb <= '0';
     WAIT FOR 10 ns;
-    IF m_tb = '1' THEN
-      REPORT "Test Case 2 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 2 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '1') REPORT "Test Case 2 Failed" SEVERITY ERROR;
 
     -- Test case 3
     x_tb <= '0';
     y_tb <= '1';
     s_tb <= '0';
     WAIT FOR 10 ns;
-    IF m_tb = '0' THEN
-      REPORT "Test Case 3 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 3 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '0') REPORT "Test Case 3 Failed" SEVERITY ERROR;
 
     -- Test case 4
     x_tb <= '1';
     y_tb <= '1';
     s_tb <= '0';
     WAIT FOR 10 ns;
-    IF m_tb = '1' THEN
-      REPORT "Test Case 4 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 4 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '1') REPORT "Test Case 4 Failed" SEVERITY ERROR;
 
     -- Test case 5
     x_tb <= '0';
     y_tb <= '0';
     s_tb <= '1';
     WAIT FOR 10 ns;
-    IF m_tb = '0' THEN
-      REPORT "Test Case 5 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 5 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '0') REPORT "Test Case 5 Failed" SEVERITY ERROR;
 
     -- Test case 6
     x_tb <= '1';
     y_tb <= '0';
     s_tb <= '1';
     WAIT FOR 10 ns;
-    IF m_tb = '0' THEN
-      REPORT "Test Case 6 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 6 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '0') REPORT "Test Case 6 Failed" SEVERITY ERROR;
 
     -- Test case 7
     x_tb <= '0';
     y_tb <= '1';
     s_tb <= '1';
     WAIT FOR 10 ns;
-    IF m_tb = '1' THEN
-      REPORT "Test Case 7 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 7 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '1') REPORT "Test Case 7 Failed" SEVERITY ERROR;
 
     -- Test case 8
     x_tb <= '1';
     y_tb <= '1';
     s_tb <= '1';
     WAIT FOR 10 ns;
-    IF m_tb = '1' THEN
-      REPORT "Test Case 8 Passed" SEVERITY NOTE;
-    ELSE
-      REPORT "Test Case 8 Failed" SEVERITY ERROR;
-    END IF;
+    ASSERT (m_tb = '1') REPORT "Test Case 8 Failed" SEVERITY ERROR;
 
     -- End simulation
+    REPORT "END OF SIMULATION" SEVERITY NOTE;
     WAIT;
   END PROCESS;
 END;
