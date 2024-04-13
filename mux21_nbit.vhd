@@ -23,14 +23,9 @@ ARCHITECTURE df OF mux21_nbit IS
   SIGNAL m_temp : STD_LOGIC_VECTOR(DATA_WIDTH - 1 DOWNTO 0);
 
 BEGIN -- ARCHITECTURE df
-  mux21_gen : FOR i IN 0 TO DATA_WIDTH - 1 GENERATE
-    mux21_i : mux21
-    PORT MAP(
-      x => X(i),
-      y => Y(i),
-      s => s,
-      m => m_temp(i));
-  END GENERATE mux21_gen;
+  WITH s SELECT
+    m_temp <= X WHEN '0',
+    Y WHEN OTHERS;
 
   m <= m_temp;
 END ARCHITECTURE df;
