@@ -19,12 +19,12 @@ ARCHITECTURE behavior OF mux21_tb_nand IS
   SIGNAL m_tb : STD_LOGIC;
 
 BEGIN
-  uut_df_nand : mux21 PORT MAP(
+  uut_df_nand : ENTITY work.mux21(df_nand) PORT MAP(
     x => x_tb,
     y => y_tb,
     s => s_tb,
     m => m_tb
-  );
+    );
 
   -- Stimulus process
   stim_proc : PROCESS
