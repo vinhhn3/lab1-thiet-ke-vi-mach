@@ -19,7 +19,7 @@ ARCHITECTURE behavior OF mux21_tb_nand IS
   SIGNAL m_tb : STD_LOGIC;
 
 BEGIN
-  uut_df_nand : ENTITY work.mux21(df_nand) PORT MAP(
+  uut_df_nand : ENTITY work.mux21(df_nand) PORT MAP( -- use df_nand architecture of mux21
     x => x_tb,
     y => y_tb,
     s => s_tb,

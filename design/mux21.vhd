@@ -13,6 +13,6 @@ BEGIN -- architecture df
 END ARCHITECTURE df;
 
 ARCHITECTURE df_nand OF mux21 IS
-BEGIN
+BEGIN -- architecture df_nand
   m <= ((x NAND (s NAND s)) NAND (y NAND s));
 END ARCHITECTURE df_nand;
