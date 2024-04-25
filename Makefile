@@ -1,7 +1,7 @@
 # Variables
 GHDL=ghdl
 SRC=$(wildcard src/*.vhd)
-TB_SRC=$(wildcard testbench/*.vhd)
+TB_SRC=$(wildcard tb/*.vhd)
 OBJ=$(SRC:.vhd=.o)
 TB_OBJ=$(TB_SRC:.vhd=.o)
 ENTITIES=$(basename $(notdir $(SRC)))

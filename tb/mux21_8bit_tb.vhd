@@ -55,7 +55,7 @@ BEGIN
     ASSERT m = "00000000" REPORT "Test case 3 failed" SEVERITY ERROR;
 
     -- End the simulation
-    REPORT "End simulation" SEVERITY NOTE;
+    REPORT "END OF SIMULATION" SEVERITY NOTE;
     WAIT;
   END PROCESS stim_proc;
 

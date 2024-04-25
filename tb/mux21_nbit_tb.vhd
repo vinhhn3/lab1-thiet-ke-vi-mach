@@ -97,7 +97,7 @@ BEGIN
     -- Add more test cases as needed
 
     -- End of stimulus
-    REPORT "Stimulus process finished" SEVERITY NOTE;
+    REPORT "END OF SIMULATION" SEVERITY NOTE;
     WAIT;
   END PROCESS stim_proc;
 
